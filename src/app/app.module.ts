@@ -2,11 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, SafePipe } from './app.component';
+import { AuthComponent } from './auth/auth.component';
+import { EmbedIframeComponent } from './embed-iframe/embed-iframe.component';
 
 @NgModule({
+  
   declarations: [
-    AppComponent
+    AppComponent,
+    SafePipe,
+    AuthComponent,
+    EmbedIframeComponent
   ],
   imports: [
     BrowserModule,

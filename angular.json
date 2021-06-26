@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "azure-project"
+    }
+  },
+  "defaultProject": "azure-project",
+  "cli": {
+    "analytics": false
+  }
 }
