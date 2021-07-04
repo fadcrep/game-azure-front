@@ -1,0 +1,60 @@
+<div class="home">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top  nav-padding" >
+      <div class="container-fluid">
+  
+        <button class="navbar-toggler m-1" type="button" (click)="toggleNavbar()" >
+          <span class="navbar-toggler-icon"></span>
+  
+        </button>
+        <a [routerLink]="['/']" class="navbar-brand  " (click)="toggleNavbar(); setActiveLink('home')">
+          <img src="assets/img/main_logo.png" alt="logo Tilal" class="tilal-logo ">
+          <h3 class="navbar-brand mx-3 ">Cloud Gaming</h3>
+        </a>
+
+        <div class="menu collapse navbar-collapse" [ngClass]="{'show': navbarOpen}" >
+            <ul class="navbar-nav ml-auto" *ngIf="!isLoggin()" >
+                <li class=" d-block d-sm-none close_hamburger" (click)="toggleNavbar(); setActiveLink('home')">
+                  <svg (click)="toggleNavbar()" width="10" height="9" viewBox="0 0 10 9" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.67188 4.5L9.01562 2.15625C9.32031 1.875 9.32031 1.40625 9.01562 1.125L8.5 0.609375C8.21875 0.304688 7.75 0.304688 7.46875 0.609375L5.125 2.95312L2.75781 0.609375C2.47656 0.304688 2.00781 0.304688 1.72656 0.609375L1.21094 1.125C0.90625 1.40625 0.90625 1.875 1.21094 2.15625L3.55469 4.5L1.21094 6.86719C0.90625 7.14844 0.90625 7.61719 1.21094 7.89844L1.72656 8.41406C2.00781 8.71875 2.47656 8.71875 2.75781 8.41406L5.125 6.07031L7.46875 8.41406C7.75 8.71875 8.21875 8.71875 8.5 8.41406L9.01562 7.89844C9.32031 7.61719 9.32031 7.14844 9.01562 6.86719L6.67188 4.5Z"
+                      fill="white" />
+                  </svg>
+                </li>
+                
+                <li class="nav-item">
+                  <a [routerLink]="['/signup']" (click)="toggleNavbar(); setActiveLink('signup')"
+                    [ngClass]="{'active': activeLink === 'signup'}" class="nav-link"> s'inscrire</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink='/signin' (click)="toggleNavbar(); setActiveLink('signin')"
+                    [ngClass]="{'active': activeLink === 'signin'}" class="nav-link">Se connecter</a>
+                </li>
+                
+            </ul>
+
+            <ul class="navbar-nav ml-auto" *ngIf="isLoggin()" >
+              <li class=" d-block d-sm-none close_hamburger" (click)="toggleNavbar(); setActiveLink('home')">
+                <svg (click)="toggleNavbar()" width="10" height="9" viewBox="0 0 10 9" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.67188 4.5L9.01562 2.15625C9.32031 1.875 9.32031 1.40625 9.01562 1.125L8.5 0.609375C8.21875 0.304688 7.75 0.304688 7.46875 0.609375L5.125 2.95312L2.75781 0.609375C2.47656 0.304688 2.00781 0.304688 1.72656 0.609375L1.21094 1.125C0.90625 1.40625 0.90625 1.875 1.21094 2.15625L3.55469 4.5L1.21094 6.86719C0.90625 7.14844 0.90625 7.61719 1.21094 7.89844L1.72656 8.41406C2.00781 8.71875 2.47656 8.71875 2.75781 8.41406L5.125 6.07031L7.46875 8.41406C7.75 8.71875 8.21875 8.71875 8.5 8.41406L9.01562 7.89844C9.32031 7.61719 9.32031 7.14844 9.01562 6.86719L6.67188 4.5Z"
+                    fill="white" />
+                </svg>
+              </li>
+              <li class="nav-item">
+                <a routerLink='/user/dashboard' (click)="toggleNavbar(); setActiveLink('user/dashboard')"
+                  [ngClass]="{'active': activeLink === 'user/dashboard'}" class="nav-link">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn-primary" (click)= "logout()">Déconnexion</button>
+              </li>
+             
+                
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </div>

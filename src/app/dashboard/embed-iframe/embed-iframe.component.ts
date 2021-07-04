@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'embed-iframe',
@@ -8,9 +10,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class EmbedIframeComponent implements OnInit {
 
   @Input() url : string;
-  constructor() { }
+  isLoading = true;
+  constructor(public utilsService : UtilsService , private router: Router) { }
 
   ngOnInit(): void {
+    
   }
+  
+  
 
 }

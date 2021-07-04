@@ -1,3 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import 'assets/sass/variables';
+@import 'assets/sass/mixins';
+@import 'assets/sass/utils';
+@import 'assets/sass/global';
+@import '~bootstrap/scss/bootstrap';
+
+input[type=file] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // width: 150px;
+}
+
+.modal {
+    top: 10% !important;
+}
+.notification .nav-tabs li {
+  width: 50%;
+  & a.active{
+    border-top-color: #ffb812;
+  }
+}
+ul.pagination {
+    display: block;
+    text-align: center;
+    li {
+        display: inline-block;
+        &.disabled a.page-link,
+        a {
+            background-color: transparent;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            line-height: 18px;
+            &:focus {
+                border: none;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        &:first-child {
+            float: left;
+        }
+        &:last-child {
+            float: right;
+        }
+    }
+}
+
+@media all and (max-width: 460px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+    .table-container {
+        overflow: auto;
+    }
+}
+
+/* Importing Bootstrap SCSS file. */
+
+
+
 iframe {
     width: 100%;
     height: 100vh;

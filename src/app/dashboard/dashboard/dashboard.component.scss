@@ -1,0 +1,35 @@
+
+@import '../../../assets/sass/variables';
+@import '../../../assets/sass/mixins';
+
+
+.go-to-game{
+    cursor: pointer;
+}
+.offers-list {
+    padding-top: rem(100px);
+    background-color: #E5E5E5;
+
+    .input-search {
+        background-color: white;
+        border: none;
+    }
+
+    .tri {
+        @include font($font-poppins,normal,rem(12px),400, 100%, #4C5862);
+    }
+        
+    .filters-container {
+        background-color: $white;
+    }
+
+    .row-freelance{
+        margin-left: 1rem;
+        cursor: pointer;
+        @media all and (max-width: 460px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    
+}

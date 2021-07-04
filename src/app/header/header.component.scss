@@ -1,0 +1,215 @@
+@import '../../assets/sass/variables';
+@import '../../assets/sass/mixins';
+
+
+.home{
+
+    h3 {
+        display: initial
+    
+    }
+
+    nav{
+        background-color: $white;
+    }
+    .tilal-logo{
+        width: 5rem;
+    }
+
+    .menu {
+
+        li{
+           //font-family: $font-montserrat;
+
+           @include font($font-poppins,normal,rem(14px),500,rem(18px), #979595);
+           text-transform: capitalize;
+           margin: 0 10px;
+
+        }
+
+        .li-last-child{
+            a{
+                @include font($font-poppins,normal,rem(12px),300,rem(18px), $white);
+                text-transform: none;
+                background-color: #3C235B;
+
+                &:hover{
+                 background-color: lighten($color: #3C235B, $amount: 10%);
+                }
+            }
+
+
+        }
+
+        .button-offre {
+            @include font($font-poppins,normal,rem(12px),300,rem(18px), $white);
+        }
+
+        .dropdown-icon {
+            cursor: pointer;
+        }
+
+
+    }
+
+
+
+}
+.admin-logout {
+    list-style: none;
+}
+
+.modal-header {
+  padding: 0.5rem 1rem;
+}
+.notifContent {
+  max-height: 430px;
+  overflow: auto;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    padding: 0;
+    &:hover {
+        cursor: pointer;
+    }
+    & li a{
+        padding: 10px;
+    }
+}
+.nav-link.active {
+    color: #3C235B;
+    display: block;
+    border-bottom: 2px solid #E0B86D;
+}
+.nav-item.relative {
+    position: relative;
+}
+
+.haveMesage{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #ffb812;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.notify .haveMesage {
+  top: -2px;
+  right: -4px;
+}
+.notify:hover {
+  cursor: pointer;
+}
+.mySubMenu {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 0 2px 0 #ccc;
+  width: 280px;
+  right: -15px;
+  top: 30px;
+  border-radius: 3px;
+   h4 {
+    font-size: 16px;
+    padding: 10px 15px 7px;
+    margin-bottom: 0;
+   }
+   .notifLine {
+    padding: 10px;
+    background: #f0f3f5;
+    font-size: 11px;
+    text-transform: none;
+    display: block;
+    margin-bottom: 2px;
+    color: #a9a9a9;
+    font-weight: normal;
+    &:hover {
+      text-decoration: none !important;
+      background: #E0B86D;
+    color: #fff;
+    }
+    em {
+      font-size: 9px;
+    }
+   }
+   .notifBody {
+    max-height: 400px;
+    overflow: auto;
+  }
+  .notifFooter {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .notifTitle.new {
+    color: #3C235B !important;
+    font-weight: bold !important;
+  }
+}
+
+@media (max-width: 480px) {
+    .home{
+
+        .navbar-nav {
+            height: 100vh !important;
+            background-color: $primary;
+            align-items: center;
+
+          }
+
+          .navbar {
+            padding: 0 !important;
+          }
+
+
+        .tilal-logo{
+            width: 7rem;
+
+        }
+
+        .menu {
+
+            .close_hamburger{
+                position: absolute;
+                right: 0;
+                margin: 1rem;
+            }
+
+            li{
+
+
+               a{
+                color: $white !important;
+                 }
+
+
+               &:last-child{
+                   a{
+                    border: 1px solid $white !important;
+                    text-transform: none;
+                    width: 10rem;
+
+                    &:hover{
+                        color: #fff;
+                    }
+                   }
+
+               }
+            }
+
+
+        }
+
+
+
+    }
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+        left: calc(50% - 81px) !important;
+        background: transparent;
+    }
+    .admin-logout {
+        padding-left: 0;
+    }
+}

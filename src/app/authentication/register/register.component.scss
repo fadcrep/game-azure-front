@@ -1,0 +1,153 @@
+@import '../../../assets/sass/variables';
+@import '../../../assets/sass/mixins';
+
+
+
+  .alert-md-color {
+    background-color: #7B1FA2;
+    border-color: #4A148C;
+    color: #fff;
+  }
+.login {
+    background: #E5E5E5;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    img {
+        width: rem(170px);
+    }
+
+    .part-one {
+        background: $primary;
+
+        h2{
+            @include font($font-poppins,normal,rem(22px),600,rem(27px), $white);
+            margin-top: 2rem;
+        }
+
+        p {
+            @include font($font-poppins,normal,rem(10px),300,rem(12px), #F8F8F8);
+            margin-left: 4rem;
+            margin-right: 4rem;
+            margin-bottom: 3rem;
+        }
+
+    }
+
+    .part-two{
+        padding: 2rem;
+        padding-bottom: 0;
+        background: $white;
+
+        .title{
+            @include font($font-poppins,normal,rem(24px),600,rem(16px), #515151);
+            margin-left: 2rem;
+            
+        }
+
+        p {
+            margin-top: 1rem;
+            @include font($font-poppins,normal,rem(10px),290,rem(15px), #979595);
+        }
+
+        form{
+
+            .custom-input-icone{
+                background: #FAFAFA;
+                border:  0.5px solid #CACACA;
+                width: 100%;
+                box-sizing: border-box;
+                border-radius: 0px;
+                padding: rem(18px);
+                @include font($font-poppins,normal,rem(12px),300,rem(18px), #979595)
+            }
+
+            .vr{
+                margin-left:10px; 
+                margin-right:0px; 
+                margin-bottom:-3px; 
+                background-color:#3C235B; 
+                width:1px;
+                height:15px;
+            }
+            
+            .custum-icone{
+                color: $primary;
+            }
+            .custom-input1{
+                background: #FAFAFA;
+                border:  0.5px solid #CACACA;
+                width: 100%;
+                padding: 1.5rem 0;
+                box-sizing: border-box;
+                border-radius: 0px;
+                @include font($font-poppins,normal,rem(12px),300,rem(18px), #979595);
+
+                &:focus { 
+                    outline-offset:unset;
+                    outline: unset;
+                }
+            }
+
+            input {
+                &:focus{
+                    outline-offset:unset;
+                    outline: unset;
+                }
+            }
+
+            .read {
+
+                @include font($font-poppins,normal,rem(8px),300,rem(12px), #979595);
+                margin-left: 1rem;
+                width: 100%;
+
+            }
+
+            .terms {
+                @include font($font-poppins,normal,rem(8px),600,rem(12px), $primary);
+                width: 100%;
+            }
+
+            .icone-conect{
+                color: #FFFFFF;
+                font-style: normal;
+                font-size: 12px;
+                line-height: 12px;
+            }
+            .inscription{
+                
+                width: 10rem;
+                
+                padding: 0.6rem;
+                border-radius: unset;
+            
+                background-color: $primary;
+                @include font($font-poppins,normal,rem(12px),bold,rem(18px), $white);
+            }
+
+            p{
+                display: block;
+                width: 100%;
+            }
+            
+        }
+
+        .compte {
+
+            @include font($font-poppins,normal,rem(12px),300,rem(18px), #979595);
+
+        }
+
+        .connexion{
+            @include font($font-poppins,bold,rem(12px),600,rem(18px), $primary);
+        }
+        
+    }
+
+    //Franck's styles
+    @media all and (max-width: 460px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 6rem;
+    }
+}

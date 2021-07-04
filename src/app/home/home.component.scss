@@ -1,0 +1,49 @@
+@import '../../assets/sass/variables';
+@import '../../assets/sass/mixins';
+
+
+$svg_height:18rem;
+
+.landing-image {
+    width: 100%;
+}
+
+#header {
+    background-color: $primary;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    svg {
+        max-width: 100%;
+    }
+    
+
+    .description {
+        padding-top: 5rem;
+        
+        h1{
+            @include font($font-poppins,normal,rem(48px),bold,118.36%, $white);
+            span {
+                color: #E9C962;
+            }
+
+            @media all and (max-width: 460px) {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+        }
+
+        h2{
+            margin-top: rem(24px);
+           // width: rem(400px);
+            @include font($font-poppins,normal,rem(18px),300,rem(22px), $white)
+        }
+
+        a {
+            margin-top: rem(32px);
+            text-transform: capitalize;
+            @include font($font-poppins,normal,rem(15px),600,rem(25px), $primary)
+        }
+    }
+}

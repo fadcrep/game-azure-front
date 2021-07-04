@@ -1,0 +1,53 @@
+//title
+.tilal-page-title {
+    @include font($font-poppins, normal, rem(18px), 600, rem(16px), $primary);
+    margin-bottom: 45px;
+}
+
+.tilal-modal-title {
+    @include font($font-poppins,normal,rem(16px),600,rem(18px), $primary);
+}
+
+// buttons
+.tilal-btn {
+    padding: 0.5rem 2.5rem;
+    border-radius: 2px;
+    @include font($font-poppins, normal, rem(12px), bold, rem(18px), none);
+}
+
+//badge
+.tilal-badge-skills {
+    padding: 0.2rem 1rem;
+    background: #e1e7f0;
+    border-radius: 2px;
+    @include font($font-poppins, normal, rem(12px), 400, rem(18px), #666666);
+}
+
+//input
+.tilal-input{
+    background: #FAFAFA;
+    border:  0.5px solid #CACACA;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 0px;
+    @include font($font-poppins,normal,rem(12px),300,rem(18px), #979595);
+
+    &:focus { 
+        outline-offset:unset;
+        outline: unset;
+    }
+    &--prepend {
+        border-left: 0;
+    }
+}
+
+.tilal-spinner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: $primary
+}
