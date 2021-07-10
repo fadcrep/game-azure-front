@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'; 
+import { BrowserModule } from '@angular/platform-browser';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { EmbedIframeComponent } from './embed-iframe/embed-iframe.component';
@@ -17,6 +18,7 @@ import { GameComponent } from './game/game.component';
   ],
   imports: [
     CommonModule,
+    BrowserModule,
     DashboardRoutingModule
   ],
   exports:[EmbedIframeComponent]

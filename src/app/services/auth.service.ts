@@ -41,6 +41,16 @@ export class AuthService {
     )
   }
 
+  startOrStopVm(endUrl: string): Observable<any>{
+    return this.httpClient.post<any>(this.baseURL + endUrl, this.httpOptions)
+    .pipe(
+      retry(3),
+      catchError(this.errorHandl)
+    )
+  }
+
+
+
 
   errorHandl(error) {
     let errorMessage = '';

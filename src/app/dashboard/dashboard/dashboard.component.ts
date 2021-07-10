@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
@@ -9,8 +10,10 @@ import { UtilsService } from 'src/app/services/utils.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor( public utilsService : UtilsService , private router: Router) { }
- gameUrl = 'user/dashboard/game'
+  constructor( private router: Router , public authService: AuthService) { }
+ gameUrl = 'user/dashboard/game';
+ startVmUrl = 'vm/start'
+ show = true;
   ngOnInit(): void {
 
     
@@ -18,7 +21,18 @@ export class DashboardComponent implements OnInit {
 
   goTogame(){
     if(localStorage.getItem('authorization')=='true'){
-      this.router.navigateByUrl(this.gameUrl);
+
+      this.authService.startOrStopVm(this.startVmUrl).subscribe(
+        response =>{
+          console.log(response.status);
+          this.show = false;
+          setTimeout(() => {
+            
+            this.router.navigateByUrl(this.gameUrl);
+          }, 45000);
+        }
+      )
+      
     }else {
       alert("Vous n'êtes pas autorisé à jour ce jeu" );
     }

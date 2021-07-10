@@ -1,36 +1,53 @@
-<div class="container offers-list px-3 mt-sm-5 ">
-    <div class="row justify-content-center">
-        <div class="col px-sm-0">
-            <h4 class="tilal-page-title mb-4">Liste des jeux</h4>
-        </div>
+<div class="container offers-list px-3 mt-sm-5" *ngIf="show">
+  <div class="row justify-content-center">
+    <div class="col px-sm-0">
+      <h4 class="tilal-page-title mb-4">Liste des jeux</h4>
     </div>
+  </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col go-to-game" (click)="goTogame()">
-            <div class="card h-100">
-                <img src="../../../assets/img/main_logo.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Zelda</h5>
-                    <p class="card-text">Game description</p>
-                </div>
-            </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col go-to-game" (click)="goTogame()">
+      <div class="card h-100">
+        <img
+          src="../../../assets/img/main_logo.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Zelda</h5>
+          <p class="card-text">Game description</p>
         </div>
-        <div class="col go-to-game" (click)="goTogame()">
-          <div class=" card h-100">
-            <img src="../../../assets/img/main_logo.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Pokémon</h5>
-                <p class="card-text">Game description</p>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="col go-to-game" (click)="goTogame()">
-        <div class="card h-100">
-            <img src="../../../assets/img/main_logo.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Street Fighter</h5>
-                <p class="card-text">Game description</p>
-            </div>
+      <div class="card h-100">
+        <img
+          src="../../../assets/img/main_logo.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Pokémon</h5>
+          <p class="card-text">Game description</p>
         </div>
+      </div>
     </div>
+    <div class="col go-to-game" (click)="goTogame()">
+      <div class="card h-100">
+        <img
+          src="../../../assets/img/main_logo.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Street Fighter</h5>
+          <p class="card-text">Game description</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-center container offers-list px-3 mt-sm-5" *ngIf="!show">
+    <div class="spinner-border" role="status"></div>
+    <div class="">Démarrage de la vm</div>
 </div>

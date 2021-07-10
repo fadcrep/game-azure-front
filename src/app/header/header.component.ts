@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 import { UtilsService } from '../services/utils.service';
 
 @Component({
@@ -9,9 +10,10 @@ import { UtilsService } from '../services/utils.service';
 })
 export class HeaderComponent implements OnInit {
   navbarOpen = false;
+  stopVmUrl = 'vm/stop'
   activeLink: string;
 
-  constructor(public utilsService: UtilsService, private router: Router) { }
+  constructor(public utilsService: UtilsService, private router: Router , public authService: AuthService) { }
 
   ngOnInit(): void {
 
@@ -26,6 +28,11 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
+    this.authService.startOrStopVm(this.stopVmUrl).subscribe(
+      response =>{
+        console.log(response.status);
+      }
+    )
     localStorage.removeItem('userEmail');
 
     localStorage.removeItem('access_token');
