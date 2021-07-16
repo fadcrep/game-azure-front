@@ -2,7 +2,7 @@
 
 ## Architecture
 
- <img src="azure.png" title="made at imgflip.com"   align="left"  height=600px />
+ <img src="https://github.com/fadcrep/game-azure-front/blob/main/Azure.pngure.png" title="azure"   align="left"  height=600px />
 
 ## Cloner de projet  avec 
 `git clone https://github.com/fadcrep/game-azure-front.git`
